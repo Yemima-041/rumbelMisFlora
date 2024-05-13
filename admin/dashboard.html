@@ -33,7 +33,9 @@
 <body>
 
 
-    <div class="">
+<div class="flex"> <!--penggabung 2 div-->
+    <div id="kiri"  class="bg-slate-500 w-1/4"> <!--isi bar-->
+
     <!-- Tombol Hamburger -->
     <button id="toggleButton" class="block md:hidden text-black">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -42,7 +44,7 @@
     </button>
 
     <!-- Daftar tautan menu yang tersembunyi -->
-    <nav id="menuLinks" class="bg-gray-100 rounded-md p-4">
+    <nav id="menuLinks" class="bg-gray-100 rounded-sm p-4">
         <a href="#" class="text-black hover:text-blue-600 block py-2">Dashboard</a>
         <a href="#" class="text-black hover:text-blue-600 block py-2">Magang MSIB</a>
         <a href="#" class="text-black hover:text-blue-600 block py-2">Studi Independen Bersertifikat</a>
@@ -51,34 +53,160 @@
         <a href="#" class="text-black hover:text-blue-600 block py-2">Program dan Kegiatan Lainnya</a>
         <a href="#" class="text-black hover:text-blue-600 block py-2">Program dan Kegiatan Lainnya</a>
     </nav>
+    
 
-</div>
-
+ 
     <!-- Isi Konten -->
     <div class="mx-12 mt-20"> <!-- Atur margin-top sesuai dengan posisi tombol hamburger -->
+        
         <div class="flex">
             <img class="w-12 h-12" src="/src/img/icon.png" alt="">
             <h1 class="text-sky-500 text-3xl font-bold font-['Poppins'] ml-4">E-Learning</h1>
         </div>
         
-        <div class="rounded-xl bg-sky-500 p-4 mt-14 text-center">
-            <div class="flex items-center justify-center">
-                <img class="w-12 h-12" src="/src/img/user.png" alt=""> 
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row">
+                <div class="rounded-xl bg-sky-500 px-24 py-6 mt-14 mb-8 text-center ">
+                    <div class="flex items-center justify-center">
+                        <img class="w-12 h-12" src="/src/img/user.png" alt=""> 
+                    </div>
+                    <h2 class="text-white text-2xl font-bold mt-6">Jennie</h2>
+                    <h2 class="text-white text-sm font-normal">Jennie</h2>
+                </div>
             </div>
-            <h2 class="text-white text-2xl font-bold mt-6">Jennie</h2>
-            <h2 class="text-white text-sm font-normal">Jennie</h2>
         </div>
-    </div>
 
-    <script>
-        // Dapatkan tombol hamburger dan tautan menu
-        const toggleButton = document.getElementById('toggleButton');
-        const menuLinks = document.getElementById('menuLinks');
+        <div id="menuLinkss" class="container mx-auto hidden md:block"> <!-- pilihan tombol -->
+            <div class="flex flex-col lg:flex-row">
+                <div class="rounded-xl border border-gray-900 bg-white shadow-lg p-6 mt-14 text-center">
+                    <div class="flex items-center justify-center">
+                        <div class="grid grid-cols-1 gap-4 text-2xl">
+                            <button class=" px-8 row-button border hover:border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 ease-in-out shadow-md rounded-lg active:bg-yellow-400 active:border-yellow-400">Dashboard</button>
+                            <button class=" px-8 row-button border hover:border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 ease-in-out shadow-md rounded-lg  active:bg-yellow-400 active:border-yellow-400">Kelola Materi</button>
+                            <button class=" px-8 row-button border hover:border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 ease-in-out shadow-md rounded-lg active:bg-yellow-400 active:border-yellow-400">Siswa</button>
+                            <button class=" px-8 row-button border hover:border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 ease-in-out shadow-md rounded-lg active:bg-yellow-400 active:border-yellow-400">Absensi</button>
+                            <button class=" px-8 row-button border hover:border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 ease-in-out shadow-md rounded-lg active:bg-yellow-400 active:border-yellow-400">Profile</button>
+                            <button class=" px-8 row-button border hover:border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 ease-in-out shadow-md rounded-lg active:bg-yellow-400 active:border-yellow-400">
+                            <button class=" px-8 row-button border hover:border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 ease-in-out shadow-md rounded-lg active:bg-yellow-400 active:border-yellow-400">Tugas Sekolah</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!--isi konten-->
+
+    </div><!-- isi bar-->
+
     
-        // Tambahkan event listener untuk mengontrol visibilitas tautan menu
-        toggleButton.addEventListener('click', () => {
-            menuLinks.style.display = menuLinks.style.display === 'none' ? 'block' : 'none';
-        });
-    </script>
+
+ <div class="bg-orange-200 w-3/4 justify-center"> <!--untuk isian kanan-->
+    <table class="table-auto border border-collapse border-gray-200 mx-auto mt-24">
+        <thead class="bg-blue-400">
+          <tr >
+            <th class="px-14 py-8">No</th>
+            <th class="px-14 py-4">Nama</th>
+            <th class="px-14 py-4">NISN</th>
+            <th class="px-14 py-4">Kelas</th>
+            <th class="px-14 py-4">Nilai</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="">
+            <td class="px-4 py-2 border">1</td>
+            <td class="px-4 py-2 border">Adam</td>
+            <td class="px-4 py-2 border">858</td>
+            <td class="px-4 py-2 border">lala</td>
+            <td class="px-4 py-2 border">lolo</td>
+          </tr>
+      
+          <tr class="bg-blue-100">
+            <td class="px-4 py-2 border">2</td>
+            <td class="px-4 py-2 border">Eva</td>
+            <td class="px-4 py-2 border">859</td>
+            <td class="px-4 py-2 border">lala</td>
+            <td class="px-4 py-2 border">lolo</td>
+          </tr>
+      
+          <tr class="">
+              <td class="px-4 py-2 border">3</td>
+              <td class="px-4 py-2 border">Jasmine</td>
+              <td class="px-4 py-2 border">859</td>
+              <td class="px-4 py-2 border">lala</td>
+              <td class="px-4 py-2 border">lolo</td>
+            </tr>
+      
+            <tr class="bg-blue-100">
+              <td class="px-4 py-2 border">4</td>
+              <td class="px-4 py-2 border">koko</td>
+              <td class="px-4 py-2 border">859</td>
+              <td class="px-4 py-2 border">lala</td>
+              <td class="px-4 py-2 border">lolo</td>
+            </tr>
+      
+            <tr class="">
+              <td class="px-4 py-2 border">3</td>
+              <td class="px-4 py-2 border">Jasmine</td>
+              <td class="px-4 py-2 border">859</td>
+              <td class="px-4 py-2 border">lala</td>
+              <td class="px-4 py-2 border">lolo</td>
+            </tr>
+          <!-- Sisipkan baris tambahan di sini jika perlu -->
+        </tbody>
+      </table>
+      
+      <div class="justify-between flex "><!--ke3-->
+          <div class="mx-auto">
+          <h1>5 tampil dari 20 data</h1>
+      </div>
+      
+      
+          <div class="flex">
+              <h1>previous</h1>
+              <button class=" px-8 row-button border hover:border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 ease-in-out shadow-md rounded-lg active:bg-yellow-400 active:border-yellow-400">1</button>
+              <button class=" px-8 row-button border hover:border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 ease-in-out shadow-md rounded-lg active:bg-yellow-400 active:border-yellow-400">2</button>
+              <button class=" px-8 row-button border hover:border-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300 ease-in-out shadow-md rounded-lg active:bg-yellow-400 active:border-yellow-400">3</button>
+              <h1>next</h1>
+          </div>
+      </div>
+    </div> <!--untuk isian kanan-->
+                  
+</div>
+   
+   <script>
+    // Dapatkan tombol hamburger dan tautan menu
+    const toggleButton = document.getElementById('toggleButton');
+    const menuLinks = document.getElementById('menuLinks');
+    const menuLinkss = document.getElementById('menuLinkss');
+
+    // Tambahkan event listener untuk mengontrol visibilitas tautan menu
+    toggleButton.addEventListener('click', () => {
+        menuLinks.style.display = menuLinks.style.display === 'none' ? 'block' : 'none';
+    });
+
+
+    
+
+    // Fungsi untuk mengatur visibilitas menu berdasarkan lebar layar
+    function setMenuVisibility() {
+    // Jika lebar layar lebih besar atau sama dengan 768px, tampilkan menu
+    if (window.innerWidth >= 768) {
+        menuLinkss.style.display = 'block';
+        menuLinks.style.display = 'none';
+    } else {
+        menuLinkss.style.display = 'none';
+        menuLinks.style.display === 'none' ? 'block' : 'none';
+    }
+
+   
+    }
+
+    // Panggil fungsi untuk mengatur visibilitas menu saat halaman dimuat
+    setMenuVisibility();
+
+    // Tambahkan event listener untuk menyesuaikan visibilitas menu saat ukuran layar berubah
+    window.addEventListener('resize', setMenuVisibility);
+
+</script>
 </body>
 </html>
